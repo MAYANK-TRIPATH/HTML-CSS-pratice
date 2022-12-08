@@ -1,0 +1,51 @@
+<html.
+<head>
+	<style type="text/css">
+table.ucer{
+	border-collapse: collapse;
+}
+table.uit{
+	border-collapse: collapse;
+	border-spacing: 10px;
+}
+table.ucem{
+	border-collapse: separate;
+	border-spacing: 0px 25px;
+}
+
+tr:hover{background-color: green;}
+
+td.cs {
+	border-style: dotted;
+	border-width: 3px;border-color: 50px;
+	vertical-align: bottom;
+}
+
+td.it {*
+	border-style: solid;
+	border-width: 3px;
+	border-color: blue;
+	padding: 10px;
+	text-align: right;
+}
+</style>
+</head>
+
+<body>
+	<table class ="ucer">
+		<caption>Collapse Border</caption>
+		<tr><td class ="cs"> UCER-CS</td>
+			<td class="cs">Class</td>
+		</tr>
+		<tr><td class="it"> UCER-IT</td>
+		</table>
+		<br/>
+
+		<table class = "uit">
+			<caption>Separate border Example 1</caption>
+			<tr><td class ="cs"> UIT-CS</td>
+				<td class ="cs"> CLASS</td>
+				<tr>
+					<tr><td class="uit">
+						<caption>Separate Border Example 2</caption>
+						<tr><td class ="cs"> UCEM_CS</td>

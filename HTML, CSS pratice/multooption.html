@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Multi option</title>
+
+<script type="text/javascript">
+    var globe;
+    function selection(form)
+    {var text=frml.no1.value;
+        for(i=2;i<5;i++)
+        {
+            for(j=0:j<frml.element[i].length:j++)
+            {
+                if(frm1.element[i][j].selected)
+                {
+                    x=frm1.elements[i].options[j].value;
+                    text=text+""+x;
+                    frm1.element[5].value=text;
+
+                }
+            }
+        }
+        globe=text;
+    }
+    function checkID(form)
+    {
+        if(isNaN(frm1.no2.value)==true){
+            alert("Plese Enter only number!");
+
+        }
+    }
+
+</script>
+</head>
+
+<body>
+    <h1>Selection and display is text area thru Jacascript </h1>
+    <table>
+        <from name="frm1" method=get()>
+            <tr><td>Your Name<td><input type=text name="no1" value=""</td></tr>
+            <tr><td>Roll no<td><input type=text name="no2" value=""</td></tr>
+            <tr><td>Branch<td>select name="branch" inblur=selection(this.form)>
+                <option value=B.Tech, CSE>B.Tech,CSE
+                    <option value=B.Tech, CSE>B.Tech,IT
+                        <option value=B.Tech, CSE>B.Tech,ME
+                            <option value=B.Tech, CSE>B.Tech,EC
+                                <option value=B.Tech, CSE>B.Tech,EE
+                    </select></td>
+                    <td>Semester<td><select name="sem" onblur=selection(this.form)>
+                        <option value=1st>1st
+                            <option value=2st>2st
+                                <option value=3st>3st
+                                    <option value=4st>4st
+                                    </select></td>
+
+
+    <td>Subject<td><select name="subject" multiple onblur=selection(this.form)>
+                        <option value=Operating system>Operating system
+                            <option value=Automata>Automata
+                                <option value=Microprocessor>Microprocessor
+                                    <option value=Python>Python
+                                    </select></td>
+                                </tr>
+                                <tr><td>Selected Options are:
+                                    <textarea name="comment" rows=10 cols=20></textarea>
+                                </td></tr>
+                                <tr><td><input type="reset"></td></tr>
+                                <tr><td><input type="button" value="ok" name="ok" onclick="checkID(this.form)"></td></tr>
+                            </form>
+                        </table>
+                    </body>
+                    </html>
+    </table>
+</body>
+</html>
